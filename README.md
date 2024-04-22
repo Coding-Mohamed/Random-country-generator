@@ -36,5 +36,5 @@ Note: The Top country feature is only available on larger screens.
 1. **Clone the Repository**
 
    ```bash
-   git clone <https://github.com/Coding-Mohamed/Random-country-generator>
+   https://github.com/Coding-Mohamed/Random-country-generator
    ```
