@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Country</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <header class="text-center py-5">
+      <a href="#" onclick="location.reload();" class="text-4xl font-bold">Random Country Generator</a>
+    </header>
+    <div class="container mx-3 px-4">
+      <p class="mb-4">
+        <span class="text-blue-600 mb-2">Are you ready to become a geography expert?</span>
+        <br />
+        This is your moment to shine and master your knowledge of the world's geography!
+        <br /><br />
+        Click the <b>Explore</b> button below to embark on an exciting journey of discovery and explore a random country.
+      </p>
+      <p>Discover fascinating details about each country as you navigate through this interactive experience.</p>
+      <ul class="country-info list-disc list-inside mb-4 mt-3 flex flex-wrap">
+        <li class="city-info bg-blue-600 text-white m-2 p-2 rounded">Capital</li>
+        <li class="city-info bg-blue-600 text-white m-2 p-2 rounded">Population</li>
+        <li class="city-info bg-blue-600 text-white m-2 p-2 rounded">Language</li>
+        <li class="city-info bg-blue-600 text-white m-2 p-2 rounded">Currency</li>
+        <li class="city-info bg-blue-600 text-white m-2 p-2 rounded">Country&nbsp;size</li>
+        <li class="city-info bg-blue-600 text-white m-2 p-2 rounded">Region</li>
+      </ul>
+      <div class="flex justify-center mb-4">
+        <a href="#" class="bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded inline-block" id="btn">
+          <span>Explore</span>
+          <svg class="w-6 h-6 inline-block ml-2" viewBox="0 0 66 43" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M40.1544 3.89485L43.9763 0.139297C44.1708 -0.0518421 44.4826 -0.0518571 44.6772 0.139263L65.6916 20.7848C66.0856 21.1719 66.0912 21.805 65.7041 22.199C65.7 22.2032 65.6959 22.2073 65.6917 22.2114L44.6771 42.8608C44.4826 43.0519 44.1708 43.0519 43.9763 42.8609L40.1545 39.1069C39.9575 38.9134 39.9547 38.5969 40.1482 38.3999C40.1503 38.3977 40.1524 38.3956 40.1546 38.3935L56.9938 21.8568C57.1908 21.6633 57.1937 21.3467 57.0002 21.1497C56.9981 21.1475 56.996 21.1454 56.9938 21.1433L40.1545 4.60825C39.9575 4.41478 39.9546 4.09821 40.1481 3.90117C40.1502 3.89905 40.1523 3.89694 40.1544 3.89485ZM20.1544 3.89485L23.9763 0.139297C24.1708 -0.0518421 24.4826 -0.0518571 24.6772 0.139263L45.6916 20.7848C46.0856 21.1719 46.0912 21.805 45.7041 22.199C45.7 22.2032 45.6959 22.2073 45.6917 22.2114L24.6771 42.8608C24.4826 43.0519 24.1708 43.0519 23.9763 42.8609L20.1545 39.1069C19.9575 38.9134 19.9547 38.5969 20.1482 38.3999C20.1503 38.3977 20.1524 38.3956 20.1546 38.3935L36.9938 21.8568C37.1908 21.6633 37.1937 21.3467 37.0002 21.1497C36.9981 21.1475 36.996 21.1454 36.9938 21.1433L20.1545 4.60825C19.9575 4.41478 19.9546 4.09821 20.1481 3.90117C20.1502 3.89905 20.1523 3.89694 20.1544 3.89485ZM0.154393 3.89485L3.97631 0.139297C4.17083 -0.0518421 4.48263 -0.0518571 4.67717 0.139263L25.6916 20.7848C26.0856 21.1719 26.0912 21.805 25.7041 22.199C25.7 22.2032 25.6959 22.2073 25.6917 22.2114L4.6771 42.8608C4.4826 43.0519 4.17082 43.0519 3.97629 42.8609L0.154519 39.1069C-0.0424848 38.9134 -0.0453207 38.5969 0.148185 38.3999C0.150289 38.3977 0.152413 38.3956 0.154556 38.3935L16.9938 21.8568C17.1908 21.6633 17.1937 21.3467 17.0002 21.1497C16.9981 21.1475 16.9959 21.1454 16.9938 21.1433L0.154521 4.60825C-0.0425131 4.41478 -0.0453987 4.09821 0.148076 3.90117C0.150163 3.89905 0.152269 3.89694 0.154393 3.89485Z" fill="#FFFFFF"></path>
+          </svg>
+        </a>
+      </div>
+
+      <div class="random-country mb-4">
+        <div id="countryName" class="mb-4 text-2xl font-semibold"></div>
+        <div class="flex flex-wrap">
+          <div id="countryFlagContainer" class="mb-4 mr-4"></div>
+          <div>
+            <div id="countryCapital" class="mb-4"></div>
+            <div id="countryPopulation" class="mb-4"></div>
+            <div id="countryLanguage" class="mb-4"></div>
+            <div id="countryCurrency" class="mb-4"></div>
+            <div id="countrySize" class="mb-4"></div>
+            <div id="countryRegion" class="mb-4"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="topCountries" class="fixed top-10 right-3 bg-white p-5 rounded-lg shadow-md">
+        <h2 class="text-m font-bold mb-4 text-center">Largest Population</h2>
+        <!-- The top 5 countries will be added here by the JavaScript -->
+      </div>
+      <div id="largestSize" class="fixed top-20 right-3 bg-white p-5 rounded-lg shadow-md">
+        <h2 class="text-m font-bold mb-4 text-center">Largest Size</h2>
+        <!-- The top 5 countries will be added here by the JavaScript -->
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

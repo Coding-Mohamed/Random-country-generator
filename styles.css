@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:900i");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+  line-height: 2;
+  font-size: 1.1rem;
+}
+a:hover {
+  color: #0056b3;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 20px 0;
+}
+
+#topCountries,
+#largestSize {
+  width: 200px;
+  text-align: center;
+  font-size: 1rem;
+  font-family: "playfair display", sans-serif;
+  font-weight: 500;
+}
+
+h2 {
+  font-family: "playfair display", sans-serif;
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+#largestSize {
+  top: 350px;
+}
+
+.random-country {
+  background: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  display: none;
+}
+
+@media screen and (max-width: 1050px) {
+  #topCountries,
+  #largestSize {
+    display: none;
+  }
+}
